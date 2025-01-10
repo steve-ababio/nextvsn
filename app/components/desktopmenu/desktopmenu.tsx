@@ -7,8 +7,8 @@ export default function Desktop(){
                 <div className="flex gap-x-[29px] justify-center">
                     <NavItem href="/">Home</NavItem>
                     <NavItem href="/about">About us</NavItem>
-                    <NavItem href="/aboutus">Services</NavItem>
-                    <NavItem href="/aboutus">Contact</NavItem>
+                    <NavItem href="/services">Services</NavItem>
+                    <NavItem href="/contact">Contact</NavItem>
                 </div>
                 
             </nav>

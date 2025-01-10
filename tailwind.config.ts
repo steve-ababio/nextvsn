@@ -27,6 +27,9 @@ const config: Config = {
         "vsnlight":"white",
         "vsnblue":"#022E8A",
         "vsnbluelight":"#37C3FF"
+      },
+      borderColor:{
+        "vsnblue":"#022E8A",
       }
     },
   },

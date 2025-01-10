@@ -3,7 +3,7 @@ import { AboutHeroText } from "../herotext/herotext";
 
 export default function AboutHome(){
     return(
-        <Hero buttonlabel="About us">
+        <Hero>
             <AboutHeroText />
         </Hero>
     )

@@ -92,3 +92,83 @@ export const team = [
         position:"Marketing Manager"
     },
 ]
+
+export const values = [
+    {
+        title:"Innovation",
+        body:"Continuously pushing the boundaries to deliver cutting-edge solutions"
+    },
+    {
+        title:"Integrity",
+        body:"Upholding the highest standards of honesty and transparency"
+    },
+    {
+        title:"Excellence",
+        body:"Striving for the highest quality in every project."
+    },
+    {
+        title:"Collaboration",
+        body:" Working together to achieve the best results"
+    },
+    {
+        title:"Customer-Centricity",
+        body:"Putting clients at the heart of everything we do."
+    }
+]
+export const clientcomments = [
+    {
+        comment:"We needed a robust system to manage our growing congregation and activities. NEXTVSN TECH INNOVATION delivered exactly what we needed.",
+        client:{
+            name:"Pastor John Davis",
+            role:"Pastor, Grace Community Church"
+        }
+    },
+    {
+        comment:"EXTVSN TECH INNOVATION transformed our school's administrative processes. The tailored management system has made tracking student progress and managing resources so much easier. ",
+        client:{
+            name:"Sarah Mitchell",
+            role:"Principal, Greenfield High School"
+        }
+    },
+    {
+        comment:"Managing a hospital comes with unique challenges, but NEXTVSN TECH INNOVATION provided a solution that perfectly fits our needs ",
+        client:{
+            name:"Dr. Emily Carter",
+            role:"Chief Administrator, City Health Hospital"
+        }
+    },
+    {
+        comment:"Our corporate management system from NEXTVSN TECH INNOVATION has significantly enhanced our productivity. The custom features and seamless integration have made a substantial differenc",
+        client:{
+            name:"Michael Lee",
+            role:"Operations Manager, TechCorp Solutions"
+        }
+    }
+]
+
+export const whatwedo =[
+    {
+        title:"Custom Solutions",
+        body:"Tailored to fit your specific business needs"
+    },
+    {
+        title:"Scalable Systems",
+        body:"Solutions that grow with your business."
+    },
+    {
+        title:"24/7 Support",
+        body:"Our team is available around the clock to assist you."
+    },
+    {
+        title:"Expert Team",
+        body:"Professionals with extensive experience in system management"
+    },
+    {
+        title:"Seamless Integration",
+        body:"Easily integrate our systems with your existing tools and processes."
+    },
+    {
+        title:"User-Friendly Interfaces",
+        body:"Intuitive designs that make managing your operations simple and efficient."
+    }
+]

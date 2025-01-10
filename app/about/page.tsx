@@ -1,6 +1,9 @@
 import Image from "next/image";
 import AboutHome from "./components/home/home";
 import { IMAGE_BASE_PATH } from "@/constants/constants";
+import { clientcomments, values } from "@/data/data";
+import Team from "../components/team/team";
+import ReadyToTransform from "../components/readytotransform/readytotransform";
 
 export default function About(){
     return(
@@ -10,7 +13,7 @@ export default function About(){
                 <div className=" text-slate-600 pt-12">
                     <h1 className="text-[1.25rem] text-center font-bold mb-8">Who we are</h1>
                     <div className="grid place-content-center px-5 md:px-20 grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-y-[50px] gap-x-[100px]">
-                        <div className="text-[24px]">
+                        <div className=" text-[18px] md:text-[24px]">
                             <p className="mb-8">
                                 At <strong className="text-vsnblue">NEXTVSN TECH INNOVATION</strong>, 
                                 we are more than just a provider of management solutions; we are architects of transformative
@@ -47,7 +50,7 @@ export default function About(){
                     </div>
                 </div>
             </section>
-            <section className="text-white p-[60px] bg-vsnblue">
+            <section className="text-white px-5 md:px-20 py-[60px] bg-vsnblue">
                 <div>
                     <h1 className="text-[26px]">Our Mission</h1>
                     <div className="mt-6 grid place-content-center grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-y-[20px] gap-x-[100px]">
@@ -74,9 +77,9 @@ export default function About(){
                     </div>
                 </div>
             </section>
-            <section className="text-slate-700 p-[60px] bg-white">
-                <div>
-                    <h1 className="text-[26px] font-bold">Our Mission</h1>
+            <section className="text-slate-700 py-[60px]  bg-white">
+                <div className="px-5 md:px-20">
+                    <h1 className="text-[26px] font-bold">Our Vision</h1>
                     <div className="mt-6 grid place-content-center grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-y-[20px] gap-x-[100px]">
                         <div>
                             <p className="mb-6">
@@ -106,19 +109,75 @@ export default function About(){
                     </div>
                 </div>
             </section>
-            <section className="text-white p-[60px] bg-vsnblue">
-                <div>
-                    <h1 className="text-[26px]">Our Values</h1>
+            <section className="text-white bg-vsnblue">
+                <div className="py-[60px] px-5 md:px-20">
+                    <h1 className="text-[26px] pt-12">Our Values</h1>
                     <div className="mt-6 grid place-content-center grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-y-[20px] gap-x-[100px]">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
+                        <div className="flex flex-col gap-4">
+                            {
+                                values.map(({title,body},index)=>(
+                                    <div key={index} className="flex sm:items-center gap-6">
+                                        <div className="flex justify-center font-bold items-center h-8 w-8 text-slate-700 shrink-0 rounded-[50%] bg-white">{index+1}</div>
+                                        <div className="text-[16px]">
+                                            <span className=" text-vsnbluelight">{title}: </span>
+                                            <span className="text-[14px] sm:text-[16px] text-white ml-2">{body}</span>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                       </div>
+                       <div>
+                            <p>A description of the company’s core values and how they guide the work and culture. </p>
+                            <div className="relative h-[280px] mt-4 rounded-[8px]">
+                                <Image src={`${IMAGE_BASE_PATH}/values.png`} fill className="rounded-[8px] absolute w-full right-0" alt="" />
+                            </div>
+                       </div>
                     </div>
                 </div>
             </section>    
+            <section className="pt-20">
+                <div>
+                {
+                    <Team showText={false}/>
+                }
+                </div>
+            </section>
+            <section>
+                <div className="px-4 sm:px-[60px]">
+                    <h1 className="text-vsnblue text-[28px] font-bold text-center">Client Testimonials</h1>
+                    <div className="mt-6 xl:grid xl:grid-cols-[min(100%,400px),1fr] gap-y-[20px] gap-x-[30px]">
+                        <div>
+                            <h1 className="text-[30px] font-bold text-vsnblue">What Our Client Say?</h1>
+                            <div className="text-[0.88rem] text-slate-700">
+                                <p className="xl:mb-10">
+                                    Hear inspiring stories from clients who have transformed their operations and achieved remarkable success with Nextvsn Tech Innovation’s innovative solutions.
+                                </p>
+                                <p className="text-[0.88rem] xl:mb-0 mb-10  text-slate-700">
+                                    Discover the impact of our innovative solutions and exceptional support.Join the growing list of satisfied clients who trust us to 
+                                    drive their success.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex gap-6 justify-center xl:justify-start flex-wrap">
+                            {   
+                                clientcomments.map(({comment,client},index)=>
+                                    <div key={index} className="w-[400px] text-slate-600 rounded-[16px] border-2 border-vsnblue py-[24px] px-[30px]">
+                                        <p className="mb-4">{comment}</p>
+                                        <div className="text-slate-900 font-bold">
+                                            <h2>{client.name}</h2>
+                                            <div>{client.role}</div>
+                                            </div>
+                                        <div className="text-right">stars</div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="py-20">
+                <ReadyToTransform />
+            </section>
         </main>
     )
 }

@@ -29,7 +29,7 @@ export default function Mobile({closeMobileMenu,showmobile}:MobileMenuProps){
                 <NavItem href="/services" >
                     <div onClick={closeMobileMenu}>Services</div>
                 </NavItem>
-                <NavItem  href="/contactus">
+                <NavItem  href="/contact">
                     <span>Contactus</span>
                 </NavItem>
             </div>

@@ -6,6 +6,8 @@ import ServiceCard from "@/app/components/servicecard/servicecard";
 import TeamCard from "@/app/components/teamcard/teamcard";
 import { features, services, team } from "@/data/data";
 import { IMAGE_BASE_PATH } from "@/constants/constants";
+import Team from "./components/team/team";
+import ReadyToTransform from "./components/readytotransform/readytotransform";
 
 export default function App() {
   return (
@@ -41,7 +43,9 @@ export default function App() {
             >
               Who we are
             </h2>
-            <h3 className="text-[1rem] text-slate-500 font-medium text-balance mb-[60px]">Committed to driving innovation and excellence in system management solutions.Discover our journey, mission, and the values that propel us forward.</h3>
+            <h3 className="text-[1rem] text-slate-500 font-medium text-balance mb-[60px]">
+              Dedicated to advancing innovation and excellence in system management solutions. Explore our journey, mission, and the core values that drive us toward the future.
+            </h3>
           </div>
           <div className="grid gap-x-20 gap-y-10 w-full justify-center grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] px-6 sm:px-20">
             <div className="">
@@ -49,9 +53,9 @@ export default function App() {
                   <Image src={`${IMAGE_BASE_PATH}/whatarewe.png`} alt="people in a meeting" width={600} height={400} className="max-w-full object-cover rounded-[30px]" />
                 </div>
                 <p className="text-slate-500 leading-vsn26">
-                  Discover how NEXTVSN TECH INNOVATION can elevate your business operations and propel your vision forward.
-                  Join us in embracing innovation, harnessing technology, and shaping a future where your organization leads
-                  with confidence and purpose.
+                  Uncover how Nextvsn Tech Innovation can transform your business operations and accelerate your vision.
+                  Partner with us to embrace innovation, leverage cutting-edge technology, and shape a future where your
+                  organisation leads with confidence and a clear sense of purpose.
                 </p>
             </div>
             <div className="mb-10">
@@ -118,58 +122,10 @@ export default function App() {
           </div>
       </section>
       <section className="h-fit text-vsnlight pt-20">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,500px),1fr))]">
-          <div className="bg-vsnblue py-20 px-[2rem] sm:px-[3rem] md:px-[5rem] lg:px-[4rem] h-[500px]">
-            <h1 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] mb-5">Ready to Transform Your Business</h1>
-            <p className="mb-8">
-              Partner with <strong className="text-vsnbluelight">NEXTVSN TECH INNOVATION</strong> today
-              and experience the power of tailored system 
-              management solutions. Our dedicated team is
-              here to provide you with innovative tools and
-              unwavering support, helping you achieve your
-              business goals. Take the first step towards 
-              enhanced efficiency and success
-            </p>
-            <button className="bg-vsn-btn text-white px-20 py-3 rounded-[60px] flex justify-center items-center ">
-              Contact
-              <BsArrowRight />
-            </button>
-          </div>
-          <div className="relative h-[500px]">
-              <Image src={`${IMAGE_BASE_PATH}/behindcomputer.jpg`} className="absolute object-cover object-left max-h-full" alt="" fill />
-          </div>
-        </div>
+        <ReadyToTransform />
       </section>
       <section className="py-20">
-        <div className="px-4 sm:px-20">
-          <h1 className="text-slate-700 text-[20px] text-center">Meet the Innovators Behind <strong className="text-vsnblue">NEXTVSN TECH INNOVATION</strong></h1>
-          <p className="max-w-[40rem] text-slate-600 text-center mx-auto my-10">
-            Discover the talented professionals driving our success and shaping the future of system management.
-            Our dedicated team is committed to delivering innovative solutions and exceptional service.
-          </p>
-          <div className="grid gap-x-4 gap-y-10 grid-cols-[repeat(auto-fit,minmax(min(100%,270px),1fr))] pt-12 mb-10">
-            {
-              team.map(({image,name,position,role})=>(<TeamCard key={name} name={name} image={image} position={position} role={role}  />))
-            }
-            <div className="text-slate-600 md:col-span-2 flex flex-col place-self-center items-center">
-            {/* max-w-[40rem] ml-auto w-[90%] */}
-            <div className="w-[80%] xl:mx-auto">
-              <p className="mb-8">
-                At NEXTVSN TECH INNOVATION, our team is our greatest asset. Comprising industry experts,
-                seasoned developers, and visionary leaders, we work collaboratively to deliver cutting-edge
-                solutions that empower businesses.
-              </p>
-              <p className="mb-8">
-                Each member brings a wealth of knowledge and a passion for innovation, ensuring that our clients 
-                receive the best possible service. Together, we are dedicated to pushing the boundaries of what's
-                possible and helping our clients achieve their goals through technology and innovation
-              </p>
-              <button className="px-5 py-3 bg-vsn-btndeep rounded-[60px] w-fit ml-auto text-vsnlight">All team members</button>
-            </div>
-          </div>
-          </div>
-          
-        </div>  
+        <Team showText={true} />
       </section>
       <section>
         <div >
